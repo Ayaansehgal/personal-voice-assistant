@@ -6,12 +6,13 @@ import cv2
 from fer import FER
 import google.generativeai as genai
 import os
+import json
 
 engine = pyttsx3.init()
 recognizer = sr.Recognizer()
-newsapi = "api_key"
+newsapi = "caceb7f1bfa146888b1f28efb4f60552"
 emotion_detector = FER()
-os.environ["GOOGLE_API_KEY"] = "api_key"
+os.environ["GOOGLE_API_KEY"] = "AIzaSyBv9UyDqx5Klo6KOOPozrlOdVXP1YEoOac"
 # Configure the Google Gemini AI
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 
@@ -148,7 +149,7 @@ def process_command(command):
 
 
 if __name__ == "__main__":
-    speak("hi im FRIDAY")
+    speak("hi im cyrus")
     
     running = True
     r = sr.Recognizer()
@@ -159,7 +160,7 @@ if __name__ == "__main__":
                 print("Listening for wake word...")
                 audio = r.listen(source, timeout=5)
                 word = r.recognize_google(audio)
-                if word.lower() == "friday":
+                if word.lower() == "cyrus":
                     speak("Hi, I'm your assistant. How can I help you today?...")
                     with sr.Microphone() as source:
                         print("Listening for command...")
