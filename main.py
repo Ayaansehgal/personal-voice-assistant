@@ -9,7 +9,7 @@ import os
 
 engine = pyttsx3.init()
 recognizer = sr.Recognizer()
-newsapi = "caceb7f1bfa146888b1f28efb4f60552"
+newsapi = "api_key"
 emotion_detector = FER()
 os.environ["GOOGLE_API_KEY"] = "api_key"
 # Configure the Google Gemini AI
